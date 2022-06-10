@@ -1,0 +1,33 @@
+The only actor in elevator system is the passenger, which is the role that humans play when interacting with the system.
+The passenger interacts with the Elevator system by making car calls and hall calls.
+The passenger also makes decision whether to enter/leave the car or not by observing the indication of moving direction and car position.
+Therefore the use case diagram shows that the actor has relationship with four use cases of the system: Process Car Calls, Process
+Hall calls, Indicate Moving Direction, and Indicate Car Position.
+
+Process car(cabin) calls:
+this use case has several scenarios:
+1. Elevator receives car calls from passengers
+2. turn on / tun off light of car call buttons
+3. updates the records of car calls stored in system controlling parts
+
+Process Hall calls:
+1. Elevator receives hall class calls from passengers
+2. tunrs on / off light of Hall call buttons
+3. updates the records of Hall calls stored in system controlling parameters
+
+Indicating Moving Direction:
+1. The elevator should have this mechanism to let the passengers know the current moving direction of the car such that the passenger might
+decide whether to enter the car or not.
+
+Indicating Car Position:
+1. Similarly, the elevator should let the passengers know whether
+his/her destination floor is reached so that the passenger may decide to leave the car.
+
+Open/Close the Doors:
+1. The elevator should be able to open and close the doors for the passengers to get in and out of the car.
+2. The functional areas of this use case should also enable the passengers to make door reversals when the doors are closing and the
+passenger wants to get in the car.
+
+Trigger Emergency Brake:
+1. There is safety mechanism within the car to make sure that an
+unsafe state is not transiently generated.

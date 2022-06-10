@@ -1,0 +1,15 @@
+Lock needed on Seat
+1. How the system shoudl behave when two users try to book same seat?
+if there were only one application server, putting lock at application level is not possible . the use of sunchronisation.
+hence the need of lock on database level.
+
+app server sends request to theter api and lock on db.
+isolation level of db: 1. read commited; row wise lock
+if user is not able to lock the seat, send error to user that seat is not available.
+
+if withing the time the payment is not done then api server sends request to cancel the booking.
+
+
+There are two types of dbs used in the system: rdbs(relation between screen movie)  and no sql (all unstructured data: comments, reviews);
+user session data; tracking data for user also can be in no sql. this can pased to spark ml --> for user recommendations.
+

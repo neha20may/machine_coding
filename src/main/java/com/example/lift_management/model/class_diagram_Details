@@ -1,0 +1,22 @@
+Door control controls door motor; motor can be commanded to make door open, close or reversal. two door motors two door controls.
+Drive control controls the elevator drive. Drive acts as the main motor moving the cabin(car) move up, down and stopping at floors when necessary.
+Lantern control to control car lantern. two in number.
+Hall controls; one for up hall call button one for down. it accepts presses and gives feedback to hall cal lights.
+Car button control: is one for each floor and all locate in the car. the control caepts car call button and tunrs on/off car call lights.
+Car position control: is one for giving value to car position indicator so that pasengers know the current position of the car.
+
+Two non control onjects: safety and dispatcher.
+
+Dispatcher or scheduler does not control actual elevator components, but it is important in the
+software system. There is one Dispatcher for each car, whose main function is to
+calculate the target moving direction and destination for the car, as well as to maintain the
+opening time for the doors. The Dispatcher interacts with nearly all the control objects in
+the system except for LanternControl.
+
+Safety is also an environmental object, which does not belong to the control software but
+is an important part of the system. In the real world, the safety actions vary if the emergency brake of an elevator is triggered, in our elevator simulation system, though, if an emergency brake is triggered, only some message is displayed.
+
+In our system, passenger is also modeled as an environmental object. Passengers interact with hall
+call buttons and car call buttons, make door reversals, observe the direction and position of
+elevator, etc. For the sake of simplicity, the passenger object is not shown (unlike other
+environmental objects)

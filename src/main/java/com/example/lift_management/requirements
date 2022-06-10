@@ -1,0 +1,13 @@
+1. no of floors: burj khalifa jas 163 getFloors; your system can take 200 floors.
+2. no of lifts ; burj khalfa has 57 elevators; your system can take 100 lifts.
+3. No of passengers to each lift /load of lift
+4. lift door opens when it is standstill
+5. lift can transfer passengers from one floor to another in minimum time possible.
+6. lift can move up, down or standstill.
+7. moving speed of lift.
+8. Minimise what? wait time of the passengers?
+or minimise overall wait time in system?
+9. You should also discuss with the interviewer that whether he would like to have different operational zones or sectors in the elevator system. A zone is the set of floors that are covered by a set of elevators. E.g. In our case of 200 floors and 100 elevators, we can, e.g., divide all the floors into 4 zones: From 1–50: operated by 25 elevators
+When we use multiple zones in a building along with a set of elevators assigned to a zone then we can treat each zone independently from each other.
+10. Triggering alarm
+11. extra requirement: VI/utility lifts
