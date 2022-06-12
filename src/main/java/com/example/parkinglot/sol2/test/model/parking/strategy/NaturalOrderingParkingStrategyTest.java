@@ -1,9 +1,10 @@
 package com.example.parkinglot.sol2.test.model.parking.strategy;
 
-import static org.junit.Assert.assertEquals;
-
 import com.example.parkinglot.sol2.src.exception.NoFreeSlotAvailableException;
+import com.example.parkinglot.sol2.src.model.parking.strategy.NaturalOrderingParkingStrategy;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class NaturalOrderingParkingStrategyTest {
   private NaturalOrderingParkingStrategy naturalOrderingParkingStrategy =

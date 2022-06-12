@@ -1,13 +1,7 @@
 package com.example.parkinglot.sol2.test.commands;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.Matchers.any;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-
 import com.example.parkinglot.sol2.src.OutputPrinter;
+import com.example.parkinglot.sol2.src.commands.CreateParkingLotCommandExecutor;
 import com.example.parkinglot.sol2.src.model.Command;
 import com.example.parkinglot.sol2.src.model.ParkingLot;
 import com.example.parkinglot.sol2.src.model.parking.strategy.NaturalOrderingParkingStrategy;
@@ -15,6 +9,11 @@ import com.example.parkinglot.sol2.src.service.ParkingLotService;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.ArgumentCaptor;
+
+import static org.junit.Assert.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 public class CreateParkingLotCommandExecutorTest {
   private ParkingLotService parkingLotService;

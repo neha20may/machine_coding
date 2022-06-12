@@ -7,6 +7,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import com.example.parkinglot.sol2.src.OutputPrinter;
+import com.example.parkinglot.sol2.src.commands.ColorToSlotNumberCommandExecutor;
 import com.example.parkinglot.sol2.src.model.Car;
 import com.example.parkinglot.sol2.src.model.Command;
 import com.example.parkinglot.sol2.src.model.Slot;

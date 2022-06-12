@@ -1,13 +1,15 @@
 package com.example.parkinglot.sol2.test.model;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-
 import com.example.parkinglot.sol2.src.exception.InvalidCommandException;
+import com.example.parkinglot.sol2.src.model.Command;
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class CommandTest {
 

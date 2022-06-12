@@ -1,17 +1,15 @@
 package com.example.parkinglot.sol2.test;
 
-import static org.junit.Assert.assertEquals;
-
+import com.example.parkinglot.sol2.src.Main;
 import com.example.parkinglot.sol2.src.exception.InvalidCommandException;
 import com.example.parkinglot.sol2.src.exception.InvalidModeException;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.PrintStream;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class MainTest {
   private InputStream sysInBackup;

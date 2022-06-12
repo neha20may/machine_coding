@@ -1,22 +1,21 @@
 package com.example.parkinglot.sol2.test.commands;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
 import com.example.parkinglot.sol2.src.OutputPrinter;
+import com.example.parkinglot.sol2.src.commands.SlotForRegNumberCommandExecutor;
 import com.example.parkinglot.sol2.src.model.Car;
 import com.example.parkinglot.sol2.src.model.Command;
 import com.example.parkinglot.sol2.src.model.Slot;
 import com.example.parkinglot.sol2.src.service.ParkingLotService;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import org.junit.Before;
-import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.Mockito.*;
 
 public class SlotForRegNumberCommandExecutorTest {
 

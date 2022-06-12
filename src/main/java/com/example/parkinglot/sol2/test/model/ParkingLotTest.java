@@ -1,11 +1,14 @@
 package com.example.parkinglot.sol2.test.model;
 
-import static org.junit.Assert.*;
-
 import com.example.parkinglot.sol2.src.exception.InvalidSlotException;
 import com.example.parkinglot.sol2.src.exception.ParkingLotException;
 import com.example.parkinglot.sol2.src.exception.SlotAlreadyOccupiedException;
+import com.example.parkinglot.sol2.src.model.*;
 import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ParkingLotTest {
 

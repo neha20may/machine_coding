@@ -1,14 +1,17 @@
 package com.example.parkinglot.sol2.test.commands;
 
+import com.example.parkinglot.sol2.src.commands.CommandExecutor;
+import com.example.parkinglot.sol2.src.commands.CommandExecutorFactory;
+import com.example.parkinglot.sol2.src.commands.LeaveCommandExecutor;
+import com.example.parkinglot.sol2.src.exception.InvalidCommandException;
+import com.example.parkinglot.sol2.src.model.Command;
+import com.example.parkinglot.sol2.src.service.ParkingLotService;
+import org.junit.Before;
+import org.junit.Test;
+
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
-
-import com.example.parkinglot.sol2.src.model.Command;
-import com.example.parkinglot.sol2.src.service.ParkingLotService;
-import com.example.parkinglot.sol2.src.exception.InvalidCommandException;
-import org.junit.Before;
-import org.junit.Test;
 
 public class CommandExecutorFactoryTest {
 

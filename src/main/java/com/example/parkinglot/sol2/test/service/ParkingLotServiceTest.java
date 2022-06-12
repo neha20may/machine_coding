@@ -1,22 +1,21 @@
 package com.example.parkinglot.sol2.test.service;
 
-import static org.junit.Assert.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
-
+import com.example.parkinglot.sol2.src.exception.ParkingLotException;
 import com.example.parkinglot.sol2.src.model.Car;
 import com.example.parkinglot.sol2.src.model.ParkingLot;
 import com.example.parkinglot.sol2.src.model.Slot;
 import com.example.parkinglot.sol2.src.model.parking.strategy.NaturalOrderingParkingStrategy;
 import com.example.parkinglot.sol2.src.model.parking.strategy.ParkingStrategy;
-import com.example.parkinglot.sol2.src.exception.ParkingLotException;
+import com.example.parkinglot.sol2.src.service.ParkingLotService;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import org.junit.Before;
-import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.*;
 
 public class ParkingLotServiceTest {
   private ParkingLotService parkingLotService = new ParkingLotService();
