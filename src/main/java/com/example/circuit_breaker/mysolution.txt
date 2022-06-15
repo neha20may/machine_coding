@@ -1,0 +1,115 @@
+Problem:
+LoadBalancer (circuit breaker)
+
+--> node1(service1) node2 node3(service3) // there can be failures
+Task:
+1. how do CB /LB handle failures?
+2. how do you resume the normal functioning?
+
+Handling of these two above might require me to save something (state);
+
+
+State:
+LB:
+//to send the requests to nodes; node1, ..node3
+r1->n1
+r2->n2
+r3->n3
+r4->n1
+
+//Chekcing node health
+//Step 2:
+System state;  <id, sysytem state>
+state: <node_id, running/fauty, latest_time, metadata>  on which the req was succ or failed>
+service--> constntly runnign and updating state;
+1. perodic health checks we can take (100ms)
+				 map <n1, running, time> Map2; //state of the system
+
+	currentTime;
+	lastTimeChecked;
+	long threshold;
+
+	System state; //global state
+	ConfigurationFile;  --> (n1, n2, n3, metadata of the system, )
+	if(currentTime- lastTime >= threshold){
+		//time to check all the systems
+		//healthcheck_api
+		for(nextnode: nextNode(configFile)){
+			//retries 3 times health check
+			if(health_check_api(nextNode)){
+				state.put(nextNode, Success);
+			}else{
+				state.put(nextNode, Failed);
+			}
+		}
+	}
+	//update the system state
+
+2. service
+while(true){
+
+}
+
+
+Question: if n1 is up, start sending request to it?
+
+if(map2[n1].up) {
+	//send request
+}
+
+
+
+sendRequest(){
+		//Pick next node
+		NodeStartegy stgy;
+		nextNode = stgy.nextNode();
+		//check node health
+		if(check(node nextNode)) {
+			//send request
+			try{
+			sendREquest(node nextNode, request r); //get_request;
+			//if node is up and yet my request failed
+			//1. try it gain,
+			//2. user to try after sometime;  ==> confirmation;
+			}
+			catch(EXception e){
+
+			}
+		} else{
+			if(wait_retry(node nextNode)){
+				//good case
+				sendREquest(node nextNode, request r);
+			}else{
+				//record the faiure
+				record(r, nextNode);
+				updateState(nextNode, failedState);
+			}
+
+		}
+
+
+}
+
+
+wait_and_retry(node n){}
+//Method 1.  Retry 3 and time out 100ms
+step : wait for sometime; and retry again;
+records.insert(failureEvent); ---> recirds.insert(successevent)
+reply to user: please try aftr sometime; ...
+
+
+//Record of failures:
+//REcord the failure
+Map<nodeId, FailureEvent>  records; inMemory  or can
+// some external data base also;
+//redis here
+db--> records;
+
+FailureEvent: requestmetadata, time, metadata..
+
+
+
+
+
+
+
