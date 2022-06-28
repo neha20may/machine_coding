@@ -3,21 +3,17 @@
  */
 package com.naresh.service;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import com.naresh.io.EDF;
 import com.naresh.io.Job;
+
+import java.util.*;
 
 /**
  * @author Naresh Kumar <br>
  *         email- naresh.nitbhopal@gmail.com
  *
  */
-public class JobSchedulerServiceImpl implements JobSchedulerService {
+public class JobSchedulerServiceImpl implements com.naresh.service.JobSchedulerService {
 
 	@Override
 	public void shortestJobFirst(int threadNo, List<Job> job) {
